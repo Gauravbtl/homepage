@@ -27,10 +27,11 @@ steps:
   inputs:
     SonarCloud: 'recatJSSonar'
     organization: 'gauravbtl'
-    scannerMode: 'MSBuild'
-    projectKey: 'Gauravbtl_homepage'
-    projectName: 'homepage'
-
+    scannerMode: 'CLI'
+    configMode: 'manual'
+    cliProjectKey: 'Gauravbtl_homepage'
+    cliProjectName: 'homepage'
+    cliSources: './my-app'
 - script: |
     cd my-app
     npm install
