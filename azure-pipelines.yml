@@ -14,15 +14,23 @@ steps:
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
+#- task: SonarCloudPrepare@1
+ # inputs:
+ #   SonarCloud: 'sonarcloud'
+ #   organization: 'Gauravbtl'
+  #  scannerMode: 'CLI'
+   # configMode: 'manual'
+   # cliProjectKey: 'Gauravbtl_homepage'
+   # cliProjectName: 'homepage'
+    #cliSources: './my-app'
 - task: SonarCloudPrepare@1
   inputs:
-    SonarCloud: 'sonarcloud'
-    organization: 'Gauravbtl'
-    scannerMode: 'CLI'
-    configMode: 'manual'
-    cliProjectKey: 'Gauravbtl_homepage'
-    cliProjectName: 'homepage'
-    cliSources: './my-app'
+    SonarCloud: 'recatJSSonar'
+    organization: 'gauravbtl'
+    scannerMode: 'MSBuild'
+    projectKey: 'Gauravbtl_homepage'
+    projectName: 'homepage'
+
 - script: |
     cd my-app
     npm install
