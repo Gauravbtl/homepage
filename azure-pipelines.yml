@@ -17,10 +17,10 @@ steps:
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'sonarcloud'
-    organization: 'sushantsahu1987'
+    organization: 'Gauravbtl'
     scannerMode: 'CLI'
     configMode: 'manual'
-    cliProjectKey: 'sushantsahu1987_homepage'
+    cliProjectKey: 'Gauravbtl_homepage'
     cliProjectName: 'homepage'
     cliSources: './my-app'
 - script: |
